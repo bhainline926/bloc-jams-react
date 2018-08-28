@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Landing = () => (
+const Album = () => (
   <section className="album">
     Album page will go here
   </section>
