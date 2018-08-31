@@ -67,8 +67,9 @@ class Album extends Component {
            <tbody className="songs">
            	{
               this.state.album.songs.map( (song, index) => 
-                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.setState({isHovered: index+1})}
+                <tr className="song" key={index} onClick={() => this.handleSongClick(song)} onMouseEnter={() => this.setState({isHovered: index + 1})}
                     onMouseLeave={() => this.setState({isHovered: false})}>
+                 <button className="play-pause-button">
                  <td className="song-number-actions">
                       { (this.state.currentSong.title === song.title) ?
                         <i className={this.state.isPlaying ? "ion-md-pause" : "ion-md-play"}></i>
@@ -76,9 +77,10 @@ class Album extends Component {
                         (this.state.isHovered === index+1) ?
                         <i className="ion-md-play"></i>
                         :
-                        <i className="song-number">{index+1}.</i>
+                        <i className="song-number">{index+1}</i>
                       }
                  </td>
+                 </button>
                   <td className="song-title">{song.title}</td>
                   <td className="song-duration">{song.duration} seconds</td>
                 </tr>
