@@ -25,7 +25,8 @@ class Album extends Component {
      this.audioElement.src = album.songs[0].audioSrc;
   }
 
-  componentDidMount() {
+
+	componentDidMount() {
      this.eventListeners = {
        timeupdate: e => {
          this.setState({ currentTime: this.audioElement.currentTime });
@@ -44,7 +45,8 @@ class Album extends Component {
      this.audioElement.removeEventListener('durationchange', this.eventListeners.durationchange);
    }
  
-  play() {
+
+	play() {
      this.audioElement.play();
      this.setState({ isPlaying: true });
     }
@@ -92,6 +94,7 @@ class Album extends Component {
    }
 
    handleVolumeChange(e) {
+ assignment-styling
     const newVolume = e.target.value;
     this.audioElement.volume = newVolume;
     this.setState({ volume: newVolume })
@@ -99,6 +102,14 @@ class Album extends Component {
 
    formatTime(seconds) {
     if (isNaN(seconds)) { return "-:--"; }
+   	const newVolume = e.target.value;
+   	this.audioElement.volume = newVolume;
+   	this.setState({ volume: newVolume })
+   }
+
+   formatTime(seconds) {
+   	if (isNaN(seconds)) { return "-:--"; }
+ master
     const wholeSeconds = Math.floor(seconds);
     const minutes = Math.floor(wholeSeconds / 60);
     const remainingSeconds = wholeSeconds % 60;
@@ -174,7 +185,6 @@ class Album extends Component {
                 </div>
               </div>
            </section>
-
      );
    }
  }
