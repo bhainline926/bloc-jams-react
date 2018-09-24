@@ -1,0 +1,33 @@
+img.background {
+	border-radius: 8px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    color: black;
+
+}
+div.layoutBackground {
+	height: 100%;
+	background-position: center;
+	background-repeat: repeat;
+	background-size: cover;
+	background: linear-gradient(to 45deg, rgba(29, 236, 197, 0.4), rgba(96, 0, 136, 0.4) 100%);
+	border-radius: 8px;
+}
+.hero-title {
+	font-family: "Kanit", sans-serif;
+	color: purple;
+}
+
+h2.point-title {
+	font-family: 'Archivo Narrow', sans-serif;
+	font-size: 27;
+	color: white;
+}
+
+p.point-description {
+	font-family: 'Amatic SC', cursive;
+	font-size: 24px;
+	color: lightgrey;
+}

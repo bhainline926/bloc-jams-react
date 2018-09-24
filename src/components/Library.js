@@ -11,16 +11,22 @@ import albumData from './../data/albums';
    render() {
     return ( 
       <section className='library'>
+      <div className="container">
+        <div className="row">
         {
           this.state.albums.map( (album, index) => 
+          <div className="col-md-6">
             <Link to={`/album/${album.slug}`} key={index}>
               <img src={album.albumCover} alt={album.title} />
                <div>{album.title}</div>
                <div>{album.artist}</div>
                <div>{album.songs.length} songs</div>
             </Link>
+          </div>
           )
         }
+        </div>
+      </div>
       </section>
      );
    }
